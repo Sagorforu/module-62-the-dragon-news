@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <div>
       <Header></Header>
-      <Container>
+      <Container className="mt-4">
         <Row>
           <Col lg={3}>
             <LeftNav></LeftNav>

@@ -7,15 +7,15 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
-import QZone from "../Qzone/Qzone";
 import bg from "../../../assets/bg.png";
 import './RightNav.css'
+import QZone from "../Qzone/Qzone";
 
 const RightNav = () => {
   return (
     <div>
       <div>
-        <h4>Login</h4>
+        <h4 className="mb-4">Login</h4>
         <Button className="mb-2" variant="outline-primary">
           <FaGoogle /> Login with Google
         </Button>
@@ -24,7 +24,7 @@ const RightNav = () => {
         </Button>
       </div>
       <div>
-        <h4>Find Us On</h4>
+        <h4 className="mt-4">Find Us On</h4>
         <ListGroup>
           <ListGroup.Item>
             <FaFacebookF /> Facebook
