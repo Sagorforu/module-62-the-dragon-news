@@ -8,6 +8,7 @@ const Register = () => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const [accepted, setAccepted] = useState(false);
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -33,6 +34,9 @@ const Register = () => {
         setError(error);
       });
   };
+  const handleAccepted = event => {
+    setAccepted(event.target.checked)
+  }
 
   return (
     <Container className="w-25 mx-auto mt-4">
@@ -77,12 +81,13 @@ const Register = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check
+            onClick={handleAccepted}
             type="checkbox"
             name="accept"
-            label="Accept Terms and Conditions"
+            label={<>Accept <Link to='/terms'>Terms and Conditions</Link></>}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" disabled={!accepted} type="submit">
           Register
         </Button>
         <br />
